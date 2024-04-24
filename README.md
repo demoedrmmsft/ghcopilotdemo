@@ -43,7 +43,7 @@ Dentro del escenario tenemos un Bot intelligente que usara Azure OpenAI para agr
 Una vez abierto nuestro codespace en el navegador, en esta seccion necesitamos platicar de las siguientes funcionlidades de GH Copilot: 
 - Mostramos que es muy facil integrarlo en nuestro ide (Visual Studio Code):
   1. Vamos al pane lateral izquierdo y damos clic en el menu de extensiones ó con el shortcut de "Ctrl+Shift+X" ![alt text](images/image-5.png)
-  2. En la barra de Busqueda buscamos "GitHub Copilot", y comentamos que tenemos disponible la ayuda disponible inline con GH Copilot y con un asistente Virtual con Github Copilot y esta al alcance de un clic en el boton instalar. ![alt text](image-6.png)
+  2. En la barra de Busqueda buscamos "GitHub Copilot", y comentamos que tenemos disponible la ayuda disponible inline con GH Copilot y con un asistente Virtual con Github Copilot y esta al alcance de un clic en el boton instalar. ![alt text](images/image-6.png)
 - Una vez explicado lo anterior vamos al panel lateral izquierdo y le damos clic en el menu de "Chat"; ahí explicamos que tenemos una interfaz conversacional donde podemos poner nuestros promts. ![alt text](images/image-7.png)
 
 Una vez explicado esto procedemos a construir nuestro bot: 

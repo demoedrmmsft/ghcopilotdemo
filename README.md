@@ -37,11 +37,43 @@ Para poder ejecutar la demo es necesario seguir los siguientes pasos:
 
 ## Paso a paso
 
-Dentro del escenario tenemos un Bot intelligente que usara Azure OpenAI para agregar inteligencia articial generativa, este Bot se podra integrar con microsoft team y con un portal web. 
-
-
+Dentro del escenario tenemos un Bot intelligente que usara Azure OpenAI para agregar inteligencia articial generativa, este Bot se podra integrar con microsoft teams y con un portal web.  
 
 ### Construcción del Bot
+Una vez abierto nuestro codespace en el navegador, en esta seccion necesitamos platicar de las siguientes funcionlidades de GH Copilot: 
+- Mostramos que es muy facil integrarlo en nuestro ide (Visual Studio Code):
+  1. Vamos al pane lateral izquierdo y damos clic en el menu de extensiones ó con el shortcut de "Ctrl+Shift+X" ![alt text](images/image-5.png)
+  2. En la barra de Busqueda buscamos "GitHub Copilot", y comentamos que tenemos disponible la ayuda disponible inline con GH Copilot y con un asistente Virtual con Github Copilot y esta al alcance de un clic en el boton instalar. ![alt text](images/image-6.png)
+- Una vez explicado lo anterior vamos al panel lateral izquierdo y le damos clic en el menu de "Chat"; ahí explicamos que tenemos una interfaz conversacional donde podemos poner nuestros promts. ![alt text](images/image-7.png)
+
+Una vez explicado esto procedemos a construir nuestro bot: 
+1. En el asistente de GH Copilot escribimos el siguiente prompt: "Como desarrollador, necesito crear una aplicacion web de tipo bot en .Net Core llamada BuceoBot, donde utilice el template de EchoBot del Bot Framework de Microsoft". Si la Respuesta es similar a la siguiente imagen le damos clic en boton de thums up para indicar que lo que nos recomendo fue acertado (con eso le indicamos a GH Copilot que nos dio una respuesta correcta y en futuras interacciones no dará respuestas mas adecuadas). ![alt text](images/image-8.png)
+2. Es importante recalcar que la estructura del prompt anterior es del tipo "Zero Prompt", sin embargo al usar tecnicas como especificar cual es nuestro rol, expresar una acción y detallar un contexto nos permite tener respuestas mas certeras para usarlas en el desarrollo de nuestra solución. Ahora necesitamos aplicar lo que nos recomienda. Para esto vamos a instalar las platillas , abrimos una terminal en el codespace de la siguiente forma: Menu Contextual -> Terminal -> New Terminal ![alt text](images/image-9.png)
+3. Posteriomente posicionamos el curson en la primera recomendación y seleccionamos la opcion de "Insert in Terminal", ejecutamos el comando. ![alt text](image.png)
+   Puede ser que falle nuestro comando. 
+   ![alt text](image-1.png)
+4. En dado caso que falle, una de las ventajas que tenemos es que podemos usar GH copilot, tiene la posibilidad de usar comandos para poder obtener recomendaciones para resolver un error en la terminal, en la ventana de copilot escribimos el promtp "@terminal /explain #terminalLastCommand" donde con la @ especificamos el area de trabajo que en nuestro caso es la consola, / usamos el comando para que GH Copilt nos explique porque esta mal el comando anterior y con el # especificamos que comando que en nuestro caso es el ultimo. lo cual nos ayuda a no cambiar de contexto y seguir trabajando en el IDE. ![alt text](image-2.png)
+5. Aplicamos las recomendaciones e intentamos ejecutar el comando anterior y vemos que esta mal de nuevo. ![alt text](image-3.png)
+6. Es posible que ya no se encuentre este paquete por lo que vamos a cambiar nuestro prompt anterior. Necesitamos usar el template de EchoBot, por lo que necesitamos ejecutar el siguiente prompt "Como desarrollador, necesito crear una aplicacion web de tipo bot en .Net Core llamada BuceoBot, donde utilice el template de EchoBot del Bot Framework de Microsoft. El template de EchoBot para C# lo necesito instalar con el comando dotnet -i, usando dotnet new -i Microsoft.Bot.Framework.CSharp.EchoBot"![alt text](image-4.png)
+7. Seguimos las recomendaciones ejecutamos el comando ![alt text](image-5.png)
+8. Creamos nuestro proyecto ejecutando el comando de creación recomendado. ![alt text](image-6.png)
+9. Nos cambiamos de repositorio y ejecutamos el proyecto. ![alt text](image-7.png)
+10. Si estamos en el browser, nos va a preguntar si queremos abrirlo en el browser, le damos clic ![alt text](image-8.png)
+11. El api de nuestro bot esta lista. ![alt text](image-9.png)
+12. Ahora ya tenemos el cascaron de nuestro bot, podemos usar una funcionalidad para realizar un renombre en el archivo de BuceoBot/Bots/EchoBots.cs. Vamos entender como esta conformada esta clase. Abrimos el archivo ![alt text](image-10.png)
+13. Puede resultar confuso si no tengo el conocimiento de como funciona un bot, por tal motivo vamos a pedirle a GH Copilot para que nos explique. Abrimos el GH Copilot Chat y con el archivo abierto escribimos @workspace /explain. ![alt text](image-11.png)
+14. GH Copilot nos explica el contenido de nuestro Bot ![alt text](image-12.png)
+15. Pedimos a Copilot que nos ayude a renombrar EchoBot por BuceoBot, para esto escribimos el siguiente prompt "Renombrar EchoBot.cs por BuceoBot" ![alt text](image-13.png)
+16. Seguimos el procedimietno para realizar el renombramiento de EchoBot.cs ![alt text](image-14.png)
+17. Cambiamos donde diga EchoBot por BuceoBot presionamos Ctrl+Shipt+H y reemplazamos ![alt text](image-15.png)  
+18. Volvemos a ejecutar el bot, abrimos a la terminal y ejecutamos el siguiente comando: "dotnet run" ![alt text](image-16.png)
+19. Nuestro bot esta listo para ser consumido con el emulador ![alt text](image-17.png)
+20. Ya existe un recurso de Azure Bot configurado y las credenciales para realizar el despliegue
+21. De Url que necesitamos para probarlo la copiamos de la imagen anterior, en mi caso es https://potential-space-journey-r7jpqrg9gjxfp9x6-3978.app.github.dev/ y le adicionamos /api/messages, por lo que la url queda: "https://potential-space-journey-r7jpqrg9gjxfp9x6-3978.app.github.dev/api/messages"
+22. En nuestra estacion de trabajo abrimos Bot Framework Emulator ![alt text](image-18.png)
+23. Le damos clic en Open Bot , ingresamos la Url que armamos en un paso anterior y le damos clic en Connect ![alt text](image-19.png)
+24. 
+
 ### Construccion del servicio de OpenAI 
 ### Adición de inteligencia artificial generativa usando el SDK del  Azure Open AI
 ### Integraciónn del bot con Microsoft Teams

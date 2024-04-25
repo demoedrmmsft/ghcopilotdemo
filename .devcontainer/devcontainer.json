@@ -1,6 +1,6 @@
 {
     "name": "DemoGHCopilot",
-    "image": "mcr.microsoft.com/vscode/devcontainers/dotnet:6.0",
+    "image": "mcr.microsoft.com/vscode/devcontainers/dotnet:8.0",
     "extensions": [
         "github.github-vscode-theme",
         "github.copilot",
@@ -12,5 +12,5 @@
         "terminal.integrated.shell.linux": "/bin/bash"
     },
     "postCreateCommand": "curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash",
-    "forwardPorts": [5000, 5001]
+    "forwardPorts": [5000, 5001, 3978]
 }

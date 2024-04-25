@@ -4,6 +4,9 @@ The BotApp must be deployed prior to AzureBot.
 Command line:
 - az login
 - az deployment group create --resource-group <group-name> --template-file <template-file> --parameters @<parameters-file>
+- az deployment group create --resource-group demobuceobotai --template-file template-BotApp-with-rg.json --parameters parameters-for-template-BotApp-with-rg.json
+
+- az deployment group create --resource-group demobuceobotai --template-file template-AzureBot-with-rg.json --parameters parameters-for-template-AzureBot-with-rg.json
 
 # parameters-for-template-BotApp-with-rg:
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cdumZevpwrT2axI8h3IsuBI95JiXozDHSNJVXNJPs08=",
+  "Hash": "iuJETjx+8aX1WI0AMc71x8Ai9G7MTwpYuCc69y5zXEw=",
   "Source": "BuceoBot",
   "BasePath": "_content/BuceoBot",
   "Mode": "Default",
@@ -26,6 +26,8 @@
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",

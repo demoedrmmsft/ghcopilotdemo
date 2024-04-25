@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "azureBotId": {
-      "value": ""
+      "value": "buceobotazure"
     },
     "azureBotSku": {
       "value": "S1"
@@ -15,19 +15,19 @@
       "value": ""
     },
     "appType": {
-      "value": "MultiTenant"
+      "value": "UserAssignedMSI"
     },
     "appId": {
-      "value": ""
+      "value": "82a6641b-2db0-470a-bd39-8569fb753906"
     },
     "UMSIName": {
-      "value": ""
+      "value": "buceoidentity"
     },
     "UMSIResourceGroupName": {
-      "value": ""
+      "value": "demobuceobotai"
     },
     "tenantId": {
-      "value": ""
+      "value": "fb5cf4a8-088e-4279-bda3-ff6baaae47ae"
     }
   }
 }

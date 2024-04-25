@@ -60,6 +60,19 @@ Una vez explicado esto procedemos a construir nuestro bot:
 9. Nos cambiamos de repositorio y ejecutamos el proyecto. ![alt text](image-7.png)
 10. Si estamos en el browser, nos va a preguntar si queremos abrirlo en el browser, le damos clic ![alt text](image-8.png)
 11. El api de nuestro bot esta lista. ![alt text](image-9.png)
+12. Ahora ya tenemos el cascaron de nuestro bot, podemos usar una funcionalidad para realizar un renombre en el archivo de BuceoBot/Bots/EchoBots.cs. Vamos entender como esta conformada esta clase. Abrimos el archivo ![alt text](image-10.png)
+13. Puede resultar confuso si no tengo el conocimiento de como funciona un bot, por tal motivo vamos a pedirle a GH Copilot para que nos explique. Abrimos el GH Copilot Chat y con el archivo abierto escribimos @workspace /explain. ![alt text](image-11.png)
+14. GH Copilot nos explica el contenido de nuestro Bot ![alt text](image-12.png)
+15. Pedimos a Copilot que nos ayude a renombrar EchoBot por BuceoBot, para esto escribimos el siguiente prompt "Renombrar EchoBot.cs por BuceoBot" ![alt text](image-13.png)
+16. Seguimos el procedimietno para realizar el renombramiento de EchoBot.cs ![alt text](image-14.png)
+17. Cambiamos donde diga EchoBot por BuceoBot presionamos Ctrl+Shipt+H y reemplazamos ![alt text](image-15.png)  
+18. Volvemos a ejecutar el bot, abrimos a la terminal y ejecutamos el siguiente comando: "dotnet run" ![alt text](image-16.png)
+19. Nuestro bot esta listo para ser consumido con el emulador ![alt text](image-17.png)
+20. Ya existe un recurso de Azure Bot configurado y las credenciales para realizar el despliegue
+21. De Url que necesitamos para probarlo la copiamos de la imagen anterior, en mi caso es https://potential-space-journey-r7jpqrg9gjxfp9x6-3978.app.github.dev/ y le adicionamos /api/messages, por lo que la url queda: "https://potential-space-journey-r7jpqrg9gjxfp9x6-3978.app.github.dev/api/messages"
+22. En nuestra estacion de trabajo abrimos Bot Framework Emulator ![alt text](image-18.png)
+23. Le damos clic en Open Bot , ingresamos la Url que armamos en un paso anterior y le damos clic en Connect ![alt text](image-19.png)
+24. 
 
 ### Construccion del servicio de OpenAI 
 ### Adición de inteligencia artificial generativa usando el SDK del  Azure Open AI

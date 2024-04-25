@@ -1,0 +1,27 @@
+name: Deploy to Azure Bot Service
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Login via Azure CLI
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Deploy to Azure Bot Service
+      run: |
+        az bot create --kind webapp --name buceobotappserv --resource-group demobuceobotai --subscription 4f9a5ba7-9b14-41ae-802a-8e7607f15507
+        az bot publish --name buceobotappserv --resource-group demobuceobotai --code-dir "./BuceoBot" --version v4
+
+    - name: Logout from Azure CLI
+      run: az logout

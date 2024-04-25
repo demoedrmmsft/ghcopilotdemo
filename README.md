@@ -16,7 +16,7 @@ A continuacion se muestra el contenido de la guía recomendada dela Demo
   - [Paso a paso](#paso-a-paso)
     - [Construcción del Bot](#construcción-del-bot)
     - [Adición de inteligencia artificial generativa usando el SDK del  Azure Open AI](#adición-de-inteligencia-artificial-generativa-usando-el-sdk-del--azure-open-ai)
-    - [Integraciónn del bot con Microsoft Teams](#integraciónn-del-bot-con-microsoft-teams)
+    - [Integración del bot con Microsoft Teams](#integración-del-bot-con-microsoft-teams)
 
 
 ## Prerequisitos
@@ -82,5 +82,19 @@ Una vez explicado esto procedemos a construir nuestro bot:
 Procedemos a hacer inteligente nuestro bot
 
 ### Adición de inteligencia artificial generativa usando el SDK del  Azure Open AI
-### Integraciónn del bot con Microsoft Teams
+
+Para este escenario necesitamos agregar inteligencia a nuestro bot, por lo que nos auxiliaremos de Github Copilot para usar Azure OpenAI para alcanzar este objetivo. 
+
+1. Donde le vamos a agregar inteligencia es en el archivo de Bots/BuceoBot.cs, por lo que procedemos a abrirlo
+2. En GH Copilot Chat indicamos el siguiente prompt : "Como instalar la libreria de Azure y Azure.AI.OpenAI", y seguimos el procedimiento indicado en la consola ( es importante que estemos en la carpeta del proyecto usando el comando "cd BuceoBot") ![alt text](image-27.png)
+3. Vamos a usar el encadenamiento de prompts para mejorar la eficiencia de las recomendaciones del Gh Copilot in lines en los archivos que estamos trabajando.  En la linea 12 damos un salto de linea y ponemos un comentario con el siguiente prompt : "Generar 2 propiedades para la llave y el endpoint de Azure OpenAI, con un valor predeterminado"
+4. Remplazamos con los siguientes valores:
+   - Key de Azure OpenAI = "b605bdfb2f3945e1ba066c8359783ef5"
+   - Endpoint de Azure OpenAI = "https://oaibotbuceo.openai.azure.com/"
+5. Necesitamos generar un metodo para invocar a OpenAI por lo que ponemos un comentario en la linea 16 con el siguiente prompt : "#Generar un metodo asincrono que regrese un string y que reciba como parametro un texto, el metodo esta vacio" ![alt text](image-29.png)
+6. Damos un salto de linea en la linea 19 y escribimos el siguiente prompt como comentario para generar la llave para acceder al cliente de Azure Open AI: "#generar un AzureKeyCredential con la llave de OpenAI"![alt text](image-30.png)
+7. Damos un salto de linea y escribimos el siguiente prompt como comentario = " #inicializar el cliente de OpenAIClient con el endpoint de openai y el AzureKeyCredential" ![alt text](image-31.png)
+8. 
+
+### Integración del bot con Microsoft Teams
 

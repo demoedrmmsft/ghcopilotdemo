@@ -30,4 +30,4 @@ jobs:
             app-name: 'buceobotappserv'
             slot-name: 'production'
             publish-profile: ${{ secrets.AzureAppService_PublishProfile }}
-            package: '.BuceoBot/output'
+            package: './BuceoBot/output'

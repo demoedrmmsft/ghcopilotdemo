@@ -8,20 +8,26 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+  steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.x'
 
-    - name: Login via Azure CLI
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Build and publish
+        run: |
+          cd BuceoBot
+          dotnet restore
+          dotnet build --configuration Release
+          dotnet publish --configuration Release --output ./output
 
-    - name: Deploy to Azure Bot Service
-      run: |
-        az bot create --kind webapp --name buceobotappserv --resource-group demobuceobotai --subscription 4f9a5ba7-9b14-41ae-802a-8e7607f15507
-        az bot publish --name buceobotappserv --resource-group demobuceobotai --code-dir "./BuceoBot" --version v4
-
-    - name: Logout from Azure CLI
-      run: az logout
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'buceobotappserv'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile }}
+          package: '.BuceoBot/output'

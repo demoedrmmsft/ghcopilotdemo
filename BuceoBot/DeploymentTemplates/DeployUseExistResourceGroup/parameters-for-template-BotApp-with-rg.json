@@ -6,23 +6,23 @@
       "value": "buceobotappserv"
     },
     "existingAppServicePlanName": {
-      "value": ""
-    },
-    "existingAppServicePlanLocation": {
-      "value": ""
-    },
-    "newAppServicePlanName": {
       "value": "buceobotappservplan"
     },
-    "newAppServicePlanLocation": {
+    "existingAppServicePlanLocation": {
       "value": "East US"
+    },
+    "newAppServicePlanName": {
+      "value": ""
+    },
+    "newAppServicePlanLocation": {
+      "value": ""
     },
     "newAppServicePlanSku": {
       "value": {
-        "name": "S1",
-        "tier": "Standard",
-        "size": "S1",
-        "family": "S",
+        "name": "",
+        "tier": "",
+        "size": "",
+        "family": "",
         "capacity": 1
       }
     },

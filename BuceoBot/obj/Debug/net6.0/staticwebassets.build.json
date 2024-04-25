@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "cdumZevpwrT2axI8h3IsuBI95JiXozDHSNJVXNJPs08=",
+  "Source": "BuceoBot",
+  "BasePath": "_content/BuceoBot",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BuceoBot/wwwroot",
+      "Source": "BuceoBot",
+      "ContentRoot": "/workspaces/ghcopilotdemo/BuceoBot/wwwroot/",
+      "BasePath": "_content/BuceoBot",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/workspaces/ghcopilotdemo/BuceoBot/wwwroot/default.html",
+      "SourceId": "BuceoBot",
+      "SourceType": "Discovered",
+      "ContentRoot": "/workspaces/ghcopilotdemo/BuceoBot/wwwroot/",
+      "BasePath": "_content/BuceoBot",
+      "RelativePath": "default.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/default.html"
+    }
+  ]
+}

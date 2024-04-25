@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "azureBotId": {
+      "value": "buceobotazure"
+    },
+    "azureBotSku": {
+      "value": "S1"
+    },
+    "azureBotRegion": {
+      "value": "global"
+    },
+    "botEndpoint": {
+      "value": ""
+    },
+    "appType": {
+      "value": "UserAssignedMSI"
+    },
+    "appId": {
+      "value": "82a6641b-2db0-470a-bd39-8569fb753906"
+    },
+    "UMSIName": {
+      "value": "buceoidentity"
+    },
+    "UMSIResourceGroupName": {
+      "value": "demobuceobotai"
+    },
+    "tenantId": {
+      "value": "fb5cf4a8-088e-4279-bda3-ff6baaae47ae"
+    }
+  }
+}

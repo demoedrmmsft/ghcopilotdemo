@@ -15,11 +15,8 @@ A continuacion se muestra el contenido de la guía recomendada dela Demo
   - [Prerequisitos](#prerequisitos)
   - [Paso a paso](#paso-a-paso)
     - [Construcción del Bot](#construcción-del-bot)
-    - [Construccion del servicio de OpenAI](#construccion-del-servicio-de-openai)
     - [Adición de inteligencia artificial generativa usando el SDK del  Azure Open AI](#adición-de-inteligencia-artificial-generativa-usando-el-sdk-del--azure-open-ai)
     - [Integraciónn del bot con Microsoft Teams](#integraciónn-del-bot-con-microsoft-teams)
-    - [Creacion de un portal web e integración del bot](#creacion-de-un-portal-web-e-integración-del-bot)
-    - [Creacion de recursos adicionales en Azure y publicacion del sitio web y bot](#creacion-de-recursos-adicionales-en-azure-y-publicacion-del-sitio-web-y-bot)
 
 
 ## Prerequisitos
@@ -67,16 +64,23 @@ Una vez explicado esto procedemos a construir nuestro bot:
 16. Seguimos el procedimietno para realizar el renombramiento de EchoBot.cs ![alt text](image-14.png)
 17. Cambiamos donde diga EchoBot por BuceoBot presionamos Ctrl+Shipt+H y reemplazamos ![alt text](image-15.png)  
 18. Volvemos a ejecutar el bot, abrimos a la terminal y ejecutamos el siguiente comando: "dotnet run" ![alt text](image-16.png)
-19. Nuestro bot esta listo para ser consumido con el emulador ![alt text](image-17.png)
-20. Ya existe un recurso de Azure Bot configurado y las credenciales para realizar el despliegue
-21. De Url que necesitamos para probarlo la copiamos de la imagen anterior, en mi caso es https://potential-space-journey-r7jpqrg9gjxfp9x6-3978.app.github.dev/ y le adicionamos /api/messages, por lo que la url queda: "https://potential-space-journey-r7jpqrg9gjxfp9x6-3978.app.github.dev/api/messages"
-22. En nuestra estacion de trabajo abrimos Bot Framework Emulator ![alt text](image-18.png)
-23. Le damos clic en Open Bot , ingresamos la Url que armamos en un paso anterior y le damos clic en Connect ![alt text](image-19.png)
-24. 
+19. Nuestro bot esta listo para ser Desplegado en Azure ![alt text](image-17.png)
+20. Ya existe un recurso de Azure Bot configurado, es necesario ir al archivo appsettings.json, e indicamos la siguiente información:
+    - "MicrosoftAppType": "UserAssignedMSI",
+    - "MicrosoftAppId": "82a6641b-2db0-470a-bd39-8569fb753906",
+    - "MicrosoftAppPassword": "",
+    - "MicrosoftAppTenantId": "fb5cf4a8-088e-4279-bda3-ff6baaae47ae"  las credenciales para realizar el despliegue.
+  
+   Tal y como lo vemos en la siguiente imagen ![alt text](image-20.png)
 
-### Construccion del servicio de OpenAI 
+21. El proyecto ya tiene un definicion de un workflow que despliega la solucion en un Azure Bot. por lo tanto debemos ir a panel lateral izquierdo en la sección de Source Control, demos especificar el mensaje y podemos utilizar a GH Copilot para que nos recomiende una descripción ![alt text](image-21.png)
+22. Una vez generado el comentario le damos clic en el Botón de "Commit" ![alt text](image-22.png)
+23. Sincronizamos los cambios dando clic en el botón de "Sync Changes" ![alt text](image-23.png)
+24. Al realizar esto se ejecuta el workflow que despliega la solucion usando el workflow de Github actions a los servicios de Azure. Para visalizarlo le damos clic en el proyecto de github en la seccion de Actions ![alt text](image-24.png)
+25. Para ver el detalle le damos clic en el ultimo despliegue y vemos el detalle, en nuestro caso fue exitoso. ![alt text](image-25.png) 
+
+Procedemos a hacer inteligente nuestro bot
+
 ### Adición de inteligencia artificial generativa usando el SDK del  Azure Open AI
 ### Integraciónn del bot con Microsoft Teams
-### Creacion de un portal web e integración del bot
-### Creacion de recursos adicionales en Azure y publicacion del sitio web y bot
 

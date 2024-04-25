@@ -50,11 +50,21 @@ namespace BuceoBot
                 .UseStaticFiles()
                 .UseWebSockets()
                 .UseRouting()
-                .UseAuthorization()
+                .UseAuthorization()                
                 .UseEndpoints(endpoints =>
                 {
                     endpoints.MapControllers();
                 });
+
+            //  app.UseDefaultFiles()
+            //     .UseStaticFiles()
+            //     .UseWebSockets()
+            //     .UseRouting()
+            //     //.UseAuthorization()
+            //     .UseEndpoints(endpoints =>
+            //     {
+            //         endpoints.MapControllers();
+            //     });
 
             // app.UseHttpsRedirection();
         }

@@ -25,31 +25,31 @@ namespace BuceoBot.Bots
             //inicializar el cliente de OpenAIClient con el endpoint de openai y el AzureKeyCredential
             var client = new OpenAIClient(new Uri(openAIEndpoint), credential);
             // Inicializar las opciones de ChatCompletionsOptions de forma inline indicando el parametro de DeploymentName de tipo gpt-35-turbo y Messages recibido de la variable text de tipo ChatRequestUserMessage
-             var options = new ChatCompletionsOptions
+            var options = new ChatCompletionsOptions
             {
                   DeploymentName="gpt-35-turbo",
                   Messages = {
                       new ChatRequestUserMessage (text )
                   },                
              };
+             
 
              var result = await client.GetChatCompletionsAsync(options);
              return result.Value.Choices[0].Message.Content;
 
-            return "";
         }
 
 
 
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
-            var replyText = $"Echo: {turnContext.Activity.Text}";
+            var replyText = await GetOpenAIResponseAsync(turnContext.Activity.Text);
             await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
         }
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
-            var welcomeText = "Hello and welcome!";
+            var welcomeText = "Hola y Bienvenido, preguntame cosas de buceo!";
             foreach (var member in membersAdded)
             {
                 if (member.Id != turnContext.Activity.Recipient.Id)

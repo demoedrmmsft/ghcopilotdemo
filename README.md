@@ -94,7 +94,22 @@ Para este escenario necesitamos agregar inteligencia a nuestro bot, por lo que n
 5. Necesitamos generar un metodo para invocar a OpenAI por lo que ponemos un comentario en la linea 16 con el siguiente prompt : "#Generar un metodo asincrono que regrese un string y que reciba como parametro un texto, el metodo esta vacio" ![alt text](image-29.png)
 6. Damos un salto de linea en la linea 19 y escribimos el siguiente prompt como comentario para generar la llave para acceder al cliente de Azure Open AI: "#generar un AzureKeyCredential con la llave de OpenAI"![alt text](image-30.png)
 7. Damos un salto de linea y escribimos el siguiente prompt como comentario = " #inicializar el cliente de OpenAIClient con el endpoint de openai y el AzureKeyCredential" ![alt text](image-31.png)
-8. 
+8. Ingresamos el siguiente comentario para inicializar las opciones de nuestro cliente "Inicializar las opciones de ChatCompletionsOptions de forma inline indicando el parametro de DeploymentName de tipo gpt-35-turbo y Messages recibido de la variable text de tipo ChatRequestUserMessage. Siguiendo el formato new Class { Property = Value }" ![alt text](image-32.png)
+9. Si existe algun error pueden usar el siguiente codigo: 
+            "var options = new ChatCompletionsOptions
+            {
+                  DeploymentName="gpt-35-turbo",
+                  Messages = {
+                      new ChatRequestUserMessage (text )
+                  },                
+             };"
+10. Invocamos el metodo y ponemos el siguiente comentario: "Invocar el metodo GetChatCompletionsAsync y regresar la respuesta de la llamada" ![alt text](image-33.png)
+11. Regresar la respuesta es el siguiente paso, por lo que ponemos el siguiente comentario: "regresar el texto de la respuesta de Choices" ![alt text](image-34.png)
+12. En el metodo de OnMessageActivityAsync elimianmos la linea donde esta la variable de replytext y ponemos el siguiente comentario: "Declarar una variable de tipo string llamada replyText y asignarle el valor de la respuesta de GetOpenAIResponseAsync con el parametro de texto de la actividad recibida" el nombre del metodo puede variar usa el que te genero anteriormente. ![alt text](image-35.png)
+13. Procedemos a hacer el commit y el push para que se despliegue el bot. ![alt text](image-36.png)
 
 ### Integración del bot con Microsoft Teams
 
+Una vez desplegado el Bot, procedemos a instalarlo, esto lo podemos hacer dando clic en el siguiente enlace: "https://teams.microsoft.com/l/chat/0/0?users=28:82a6641b-2db0-470a-bd39-8569fb753906". El cual obtuvimos del bot de azure. ![alt text](image-37.png)
+
+Puedes ingresar el siguiente prompt: "¿Cual es el equipo basico de buceo recomendado para bucear en un arrecife?"

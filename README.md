@@ -8,10 +8,46 @@ Cada sección tiene como objetivo principal mostrar una o varias Caracteristicas
 
 La solucion final vienen el la rama finalsolution, la rama main solo contiene la guía y esta bloqueada para agregar algun cambio; sin embargo lo recomendable es crear una rama independiente y crear tu workspace (Instrucciones especificadas en la seccion de [Prerequisitos](#prerequisitos)).
 
+## Escenarios de Negocio aplicables 
+
+Los bots inteligentes que utilizan Azure Open AI y Azure Bot pueden ser implementados en una variedad de escenarios de negocio para mejorar la eficiencia, proporcionar soporte al cliente y optimizar operaciones. Aquí algunos ejemplos de cómo podrías usar un bot inteligente en diferentes industrias:
+
+1. Servicio al Cliente y Soporte Técnico:
+ - Automatización de respuestas a preguntas frecuentes.
+ - Gestión de tickets de soporte con clasificación y priorización automática.
+ - Resolución proactiva de problemas basada en la detección de patrones comunes en las consultas de los clientes.
+2. E-commerce y Retail:
+ - Bots de chat para asistir en la navegación de productos, recomendaciones personalizadas y soporte postventa.
+ - Automatización del proceso de compra y asistencia en el seguimiento de pedidos.
+ - Análisis de sentimientos de las reseñas de los clientes para mejorar la oferta de productos.
+3. Finanzas y Banca:
+ - Bots para ayudar en la consulta de saldos, transacciones, y servicios bancarios básicos.
+ - Asistencia en la gestión de inversiones y recomendaciones financieras personalizadas.
+ - Detección y alerta temprana de posibles fraudes o actividades sospechosas.
+4. Salud y Asistencia Médica:
+ - Bots para pre-triagé médico que pueden dirigir a los pacientes al especialista adecuado o aconsejar sobre la necesidad de una cita médica.
+ - Asistencia en la gestión de citas y recordatorios para medicamentos.
+ - Bots educativos que proporcionan información sobre condiciones médicas y tratamientos.
+5. Turismo y Hospitalidad:
+ - Bots que ofrecen servicios de conserjería virtual, ayudando a los huéspedes con reservas, información local, y recomendaciones.
+ - Gestión y optimización de reservas y check-ins/check-outs mediante automatización.
+ - Recolección de feedback de los huéspedes para mejorar el servicio.
+6. Recursos Humanos:
+ - Automatización de la captación de talento, filtrando CVs y programando entrevistas.
+ - Bots para la orientación y formación de nuevos empleados.
+ - Facilitación de respuestas a preguntas frecuentes sobre políticas de la empresa y beneficios.
+7. Educación:
+ - Bots tutoriales que proporcionan asistencia y recursos educativos a los estudiantes.
+ - Automatización de la administración educativa, como la inscripción de cursos y gestión de horarios.
+ - Facilitar la comunicación entre estudiantes, profesores y administrativos.
+
+Estos bots se pueden personalizar y escalar según las necesidades específicas de cada negocio, proporcionando soluciones eficientes que mejoran la experiencia del usuario y optimizan los recursos internos.
+
 A continuacion se muestra el contenido de la guía recomendada dela Demo
 
 
 - [Demo Rapida de GitHub Copilot](#demo-rapida-de-github-copilot)
+  - [Escenarios de Negocio aplicables](#escenarios-de-negocio-aplicables)
   - [Prerequisitos](#prerequisitos)
   - [Paso a paso](#paso-a-paso)
     - [Construcción del Bot](#construcción-del-bot)

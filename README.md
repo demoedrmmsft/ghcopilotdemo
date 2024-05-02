@@ -43,6 +43,8 @@ Los bots inteligentes que utilizan Azure Open AI y Azure Bot pueden ser implemen
 
 Estos bots se pueden personalizar y escalar según las necesidades específicas de cada negocio, proporcionando soluciones eficientes que mejoran la experiencia del usuario y optimizan los recursos internos.
 
+En la guia estamos planteando un bot relacionado con Buceo, pero es recomendable que el escenario lo relaciones con la industria de tu cliente. 
+
 A continuacion se muestra el contenido de la guía recomendada dela Demo
 
 
